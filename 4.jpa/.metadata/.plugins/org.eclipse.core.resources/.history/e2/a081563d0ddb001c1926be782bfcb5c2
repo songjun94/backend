@@ -1,0 +1,19 @@
+package dev.sample;
+
+import javax.persistence.EntityManagerFactory;
+
+import dev.sample.model.Book;
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		//JPA의 인터페이스 활용
+		
+		// JDBC 인터페이스
+		EntityManagerFactory emf = 
+		
+		Book book = new Book();
+	}
+
+}

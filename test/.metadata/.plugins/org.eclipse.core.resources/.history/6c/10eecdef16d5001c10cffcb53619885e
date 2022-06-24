@@ -1,0 +1,104 @@
+//userDAO.java
+
+package user;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class UserDAO {
+
+	private Connection conn;
+	private PreparedStatement pstmt;
+	private ResultSet rs;
+
+	public UserDAO() {
+		try {
+			String dbURL = "jdbc:mysql://localhost:3306/";
+			String dbName = "userInfo";
+			String dbID = "root";
+			String dbPassword = "1234";
+			Class.forName("com.mysql.jdbc.Driver");
+			conn = DriverManager.getConnection(dbURL + dbName, dbID, dbPassword);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public int login(String userID, String userPassword) {
+		String SQL = "SELECT userPassword FROM USER WHERE userID=?";
+		try {
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, userID);
+			rs = pstmt.executeQuery();
+			if (rs.next()) {
+				if ((rs.getString(1)).equals(userPassword)) 
+					return 1; // 濡쒓렇�씤 �꽦怨�
+				 else 
+					return 0; // 鍮꾨�踰덊샇 遺덉씪移�
+				}
+			return -1; // �븘�씠�뵒 議댁옱 X
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return -2; // �뜲�씠�꽣踰좎씠�뒪 �삤瑜�
+	}
+	
+	public int join(User user) {
+		String SQL = "INSERT INTO USER VALUES (?, ?, ?, ?, ?, ?, ?)";
+		try {
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, user.getUserID());
+			pstmt.setString(2, user.getUserPassword());
+			pstmt.setString(3, user.getUserName());
+			pstmt.setString(4, user.getUserAge());
+			pstmt.setString(5, user.getUserGender());
+			pstmt.setString(6, user.getUserAddress());
+			pstmt.setString(7, user.getUserPhone());
+			
+			return pstmt.executeUpdate(); // INSERT / DELETE / UPDATE 愿��젴 援щЦ�뿉�꽌 諛섏쁺�맂 �젅肄붾뱶�쓽 嫄댁닔瑜� 諛섑솚
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return -1 ;
+	}
+	
+	public User getUser(String userID) {
+		String SQL = "SELECT * FROM USER WHERE userID='"+userID+"'";
+		try {
+			pstmt = conn.prepareStatement(SQL);
+			rs = pstmt.executeQuery(SQL);
+			User user = new User();
+			if(rs.next()) {
+				user.setUserID(rs.getString(1));
+				System.out.println("getUser:user.getUserID" + user.getUserID());
+				return user;}
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+			return null;
+		}
+	
+	public int modify(User user) {
+		String SQL = "UPDATE user SET userID='" + user.getUserID() + "'"+", "
+												+ "userPassword='" + user.getUserPassword() + "'"+", "
+												+ "userName='" + user.getUserName() + "'" +", "
+												+ "UserAge='" + user.getUserAge() + "'"+", "
+												+ "userAddress='" + user.getUserAddress() + "'"+", "
+												+ "userPhone="+ "'" + user.getUserPhone() + "' "
+												+ "WHERE userID='"+ user.getUserID() +"'";
+		try {
+			pstmt = conn.prepareStatement(SQL);
+			System.out.println("executeupdate_before");
+			return pstmt.executeUpdate(SQL);
+		}catch(Exception e){
+			System.out.println("exeption");
+			e.printStackTrace();
+		}
+		System.out.println("return: -1");
+		return -1;
+	} 
+	
+		
+	}

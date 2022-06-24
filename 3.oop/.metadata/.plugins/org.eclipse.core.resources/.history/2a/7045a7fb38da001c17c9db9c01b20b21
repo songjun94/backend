@@ -1,0 +1,5 @@
+package deb.Bank.domain;
+
+public class BankTransaction {
+
+}

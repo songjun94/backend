@@ -1,0 +1,8 @@
+package com.mouse.controller;
+
+import javax.servlet.http.HttpServlet;
+
+@webServlet("/board")
+public class FrontController extends HttpServlet{
+	
+}

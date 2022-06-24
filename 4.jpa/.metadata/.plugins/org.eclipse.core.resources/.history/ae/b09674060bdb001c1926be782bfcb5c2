@@ -1,0 +1,38 @@
+package dev.sample.model;
+
+import javax.persistence.Id;
+
+/*
+ * Entity annotation : '객체와 테이블을 맵핑'
+ * 해당 class(book)를 JPA가 관리하는 Entity로 인식하게됨
+ * 별도의 table annotation 을 지정하지 않으면 해당 클래스의 이름으로 테이블이 생성됨
+ *
+ *
+ * Entity Annotation 적용시 주의할점
+ * 1. 기본생성자(Default constructor) 작성 필수(JPA가 엔티티 객체를 생성할 때 기본 생성자를 활용하기 때문에)
+ * 2. 값을 저장할 필드에 final을 사용하면 안됨
+ *
+ *
+ */
+
+//@Table
+//@Table(name="BOOKS")// books라는 이름의 테이블로 생성됨
+public class Book {
+	/*
+	 * JPA 기본 키 생성 전략(크게 2가지
+	 * 1. 직접할당 : 기본키를 애플리케이션에서 직접할당
+	 * ex) new Book(1L, "노인과바다", "헤밍웨이");
+	 * 2. 자동 생성 : 대리키 활용(strategy = GenerationType 1 2 3)
+	 * 	1) IDENTIFY : 기본키 생성을 DB한테 위임함( MYSQL의 auto increment)
+	 *  2) 
+	 * 
+	 * 
+	 */
+	
+	@Id
+	@GeneratedValue
+	private Long id; //Pk로 지정되도록 설정
+
+
+
+}

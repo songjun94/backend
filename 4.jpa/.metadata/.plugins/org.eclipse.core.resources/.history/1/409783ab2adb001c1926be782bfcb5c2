@@ -1,0 +1,9 @@
+package dev.sample.model;
+
+public class Student {
+	private Long id;
+	private String studentName;
+	
+	
+	
+}	

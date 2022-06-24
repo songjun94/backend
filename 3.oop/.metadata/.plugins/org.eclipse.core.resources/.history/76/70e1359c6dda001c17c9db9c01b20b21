@@ -1,0 +1,28 @@
+package dev.bank;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.time.Month;
+import java.util.List;
+
+import deb.Bank.domain.BankTransaction;
+import dev.bank.data.BankStatementCSVParser;
+import dev.bank.data.BankStatementParser;
+import dev.bank.service.BankStatementProcessor;
+
+public class MainApplication {
+	
+	public static void main(String[] args) throws IOException {
+		// Analyzer 생성
+		final BankStatementAnalyzer analyzer = new BankStatementAnalyzer();
+		// Parser 지정
+		final BankStatementParser parser = new BankStatementCSVParser();
+	
+		// 분석 수행
+		analyzer.analyze("bank-data-simple.csv", parser);
+	}
+	
+	
+}

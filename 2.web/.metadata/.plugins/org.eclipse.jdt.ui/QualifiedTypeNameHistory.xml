@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="javax.servlet.http.Cookie"/>
+    <fullyQualifiedTypeName name="com.mouse.controller.Controller"/>
+    <fullyQualifiedTypeName name="com.mouse.dao.MouseDAO"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="com.mouse.util.DBUtils"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="com.mouse.model.Mouse"/>
+    <fullyQualifiedTypeName name="com.mouse.service.MouseService"/>
+    <fullyQualifiedTypeName name="com.mouse.util.HttpUtil"/>
+</qualifiedTypeNameHistroy>

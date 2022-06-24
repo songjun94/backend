@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="add4">
+		<label for="name">이름</label><br>
+		<input id="name" type="text" name="name"><br> 
+		<label for="age">나이</label><br>
+		<input id="age" type="text" name="age"><br>
+		<label for="gender">성별</label><br>
+		<input id="gender" type="text" name="gender"><br> 
+		<label for="city">지역</label><br>
+		<input id="city" type="text" name="city"><br> 
+		<input type="submit">        
+	</form>
+</body>
+</html>

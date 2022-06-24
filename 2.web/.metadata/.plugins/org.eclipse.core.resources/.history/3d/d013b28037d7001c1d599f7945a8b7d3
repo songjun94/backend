@@ -1,0 +1,5 @@
+package com.mouse.controller;
+
+public interface Controller {
+
+}

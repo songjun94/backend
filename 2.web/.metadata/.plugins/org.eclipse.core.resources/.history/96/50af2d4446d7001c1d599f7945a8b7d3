@@ -1,0 +1,16 @@
+package com.mouse.dao;
+
+public class MouseDAO {
+	//singleton
+	private static MouseDAO dao = new MouseDAO();
+	
+	//기본생성자에 대한 접근제한, private이면 클래스 내부 에서만 접근 가능
+	private MouseDAO() {}
+	
+	//기본적으로 private으로 작성하는 방향으로 코딩하다가 특정 상황에서 이 메서드는 외부에 공개가 필요하겠다 라는 생각이 드는 메서드들만 
+	//상황에 맞게 접근 제어자를 변경
+	public static MouseDAO getInstance() {
+		
+	}
+	
+}

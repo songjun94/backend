@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>Mouse 등록</h3>
+	
+	<form action="board">
+		ID : <input type="text" id="id" name="id"><br/>
+		이름 : <input type="text" id="name" name="name"><br/>
+		국적 : <input type="text" id="country" name="country"><br/>
+		주소 : <input type="text" id="address" name="address"><br/>
+	</form>
+		<button type="button">등록</button>
+</body>
+</html>

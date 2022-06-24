@@ -1,0 +1,18 @@
+package com.mouse.model;
+
+public class Mouse {
+	private int id;
+	private String name;
+	private String country;
+	private String address;
+	
+	public Mouse(int id, String name, String country, String address) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.country = country;
+		this.address = address;
+	}
+	
+	
+}

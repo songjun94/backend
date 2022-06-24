@@ -1,0 +1,19 @@
+package dev.sample.demo.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import dev.sample.demo.model.Todo;
+
+@Repository
+public interface TodoRepository extends JpaRepository<Todo, Long>  {
+	// 1. query method
+		List<Todo> findByTitleNotNull(); // select t from todo t where title is not null
+		
+		// 2. named query
+		@Query("select t from Todo t where t.id > :id") 
+		List<Todo> findUser(Long id);
+}

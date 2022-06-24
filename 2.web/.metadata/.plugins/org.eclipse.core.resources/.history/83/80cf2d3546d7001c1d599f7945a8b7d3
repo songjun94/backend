@@ -1,0 +1,14 @@
+package com.mouse.dao;
+
+public class MouseDAO {
+
+	public static MouseDAO dao = new MouseDAO();
+	
+	private MouseDAO() {
+		
+	}
+	
+	
+	
+	
+}

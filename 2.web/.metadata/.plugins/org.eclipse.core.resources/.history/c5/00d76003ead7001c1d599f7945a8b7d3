@@ -1,0 +1,9 @@
+package com.mouse.util;
+
+public class HttpUtil {
+	
+	public static void forward(??) {
+		
+		
+	}
+}

@@ -1,0 +1,16 @@
+package com.mouse.util;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class HttpUtil {
+	
+	public static void forward(HttpServletRequest request, HttpServletResponse response, String path) {
+		RequestDispatcher dispatcher = request.getRequestDispatcher(path);
+		try {
+			dispatcher.forward(request, response);
+		} catch (ServletException | IOException e) {
+			e.printStackTrace();
+		}
+	}

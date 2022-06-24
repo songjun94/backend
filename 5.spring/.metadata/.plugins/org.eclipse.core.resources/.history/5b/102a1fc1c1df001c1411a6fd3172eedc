@@ -1,0 +1,31 @@
+package dev.info.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import dev.info.model.Info;
+
+@RestController
+public class InfoController {
+
+
+	@RequestMapping("/add4")
+	public Info ex4(@RequestParam("id") int id, @RequestParam("name") String name, @RequestParam("age") int age, 
+			        @RequestParam("gender") String gender, @RequestParam("city") String city) {
+		
+		
+		Info info = new Info();
+		info.setName(name);
+		info.setAge(age);
+		info.setGender(gender);
+		info.setCity(city);
+		
+		
+		
+		
+		
+		
+		return info;
+	}
+}

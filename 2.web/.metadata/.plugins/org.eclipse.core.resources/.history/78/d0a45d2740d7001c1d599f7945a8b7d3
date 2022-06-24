@@ -1,0 +1,13 @@
+package com.mouse.service;
+
+public class MouseService {
+
+	//singleton 패턴, 해당 프로그램에서 인스턴스(객체)가 하나만 생성됨을 보장
+
+	//필드 생성
+	public static MouseService service = new MouseService();
+
+	//기본 생성자
+	public MouseService() {}
+	
+}

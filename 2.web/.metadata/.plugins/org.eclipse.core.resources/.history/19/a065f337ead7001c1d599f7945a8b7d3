@@ -1,0 +1,12 @@
+package com.mouse.util;
+
+import javax.servlet.RequestDispatcher;
+
+public class HttpUtil {
+	
+	public static void forward(HttpServletRequest request, HttpServletResponse response, String path ) {
+		RequestDispatcher dispatcher = request.getRequestDispatcher(path);
+		dispatcher.forward(request, response);
+		
+	}
+}

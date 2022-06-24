@@ -1,0 +1,6 @@
+package deb.Bank.domain;
+
+// 입출금 내역에 대한 갭려 타입(컬럼)들을 보관할 모델클래스
+public class BankTransaction {
+	
+}

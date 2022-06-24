@@ -1,0 +1,36 @@
+package step03;
+
+import static org.junit.Assert.*;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import org.junit.Test;
+
+public class AppTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+		
+	}
+	
+	@Test
+	public void testSave() {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("step02");
+		EntityManager em = emf.createEntityManager();
+		EntityTransaction tx = em.getTransaction();		
+		
+		/*
+		 * 1. 切苞 单捞磐 积己 , 历厘
+		 * 
+		 * 2. 切积 单捞磐 积己 (切积 1 YOO 切积 2 Kang) 棺 历厘
+		 * 
+		 */
+		
+		
+		
+	}
+}

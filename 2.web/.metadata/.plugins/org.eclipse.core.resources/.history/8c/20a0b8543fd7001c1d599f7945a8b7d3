@@ -1,0 +1,5 @@
+package com.mouse.service;
+
+public class MouseService {
+
+}
